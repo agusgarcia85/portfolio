@@ -1,0 +1,71 @@
+/* Puedes cambiar estos colores por los tuyos */
+:root {
+  --principal: #0f766e;
+  --acento: #f59e0b;
+  --fondo: #f7f6f2;
+  --texto: #22272e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+header {
+  background: var(--principal);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem 1.5rem;
+}
+header h1 { margin: 0; font-size: 2.4rem; }
+header p { margin: 0.3rem 0 1.2rem; opacity: 0.9; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.4rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 99px;
+  transition: background 0.2s;
+}
+nav a:hover { background: rgba(255, 255, 255, 0.2); }
+
+main { max-width: 820px; margin: 0 auto; padding: 1rem; }
+
+section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+h2 { color: var(--principal); margin-top: 0; }
+a { color: var(--principal); }
+
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.proyecto {
+  border: 1px solid #e3e0d8;
+  border-left: 4px solid var(--acento);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  transition: transform 0.2s;
+}
+.proyecto:hover { transform: translateY(-3px); }
+.proyecto h3 { margin: 0 0 0.4rem; }
+.tecnologias { font-size: 0.9rem; color: #5f6670; }
+
+footer { text-align: center; padding: 2rem 1rem; color: #5f6670; font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+  header h1 { font-size: 1.8rem; }
+  section { padding: 1.2rem; }
+}
